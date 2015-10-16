@@ -32,6 +32,21 @@ public class RomanNumberTest {
         verifyRomanNumber(1000, "M");
     }
 
+    @Test
+    public void testNumber2015() throws Exception {
+        verifyRomanNumber(2015, "MMXV");
+    }
+
+    @Test
+    public void testNumber7() throws Exception {
+        verifyRomanNumber(7, "VII");
+    }
+
+    @Test
+    public void testNumber4() throws Exception {
+        verifyRomanNumber(4, "IV");
+    }
+
     private void verifyRomanNumber(int number, String value) {
         RomanNumber romanNumber = new RomanNumber(number);
         assertThat(number+" should be "+value, romanNumber.toString(), equalTo(value));
